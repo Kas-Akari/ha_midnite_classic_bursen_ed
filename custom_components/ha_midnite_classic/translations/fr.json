@@ -64,6 +64,7 @@
           "endingAmps": "Courant fin absorption",
           "WizBangJrRawCurrent": "Courant brut WhizBang Jr",
           "ReasonForResting": "Raison du repos",
+          "VbattOffset": "V Offset Battérie",
           "AbsorbVoltageSetPoint": "Consigne Voltage Absorb",
           "FloatVoltageSetPoint": "Consigne Voltage Float",
           "EqualizeVoltageSetPoint": "Consigne Voltage Equalize",

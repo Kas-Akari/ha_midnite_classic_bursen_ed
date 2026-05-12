@@ -28,6 +28,7 @@ DEFAULT_PARAMETERS = [
     "TotalEnergy",
     "Name",
     "ChargeStateText",
+    "VbattOffset",
 ]
 
 # All known parameters from classic_modbusdecoder with metadata
@@ -105,6 +106,7 @@ PARAMETER_META: dict[str, tuple] = {
     "EqualizeTimeSetPoint":    ("Equalize Time Setpoint",    "s",   None,          None,                 "mdi:timer",                       0, True,  0,   14400,   1,  1),
     "EqualizeIntervalDay":     ("Equalize Interval Day",     "day", None,          None,                 "mdi:numeric",                     0, True,  0,     255,   1,  1),
     "DaysBetweenBulkAbsorb":   ("Days Between Bulk/Absorb",  "day", None,          None,                 "mdi:numeric",                     0, True,  0,     255,   1,  1),
+    "VbattOffset":             ("V. Offset Batería",         "V",   "voltage",     "measurement",        "mdi:battery",                     1, True,  -10.0, 10.0, 0.1,  10), 
 }
 
 # Modbus register numbers for writable setpoints (address = register - 1)
@@ -117,6 +119,7 @@ WRITABLE_REGISTERS: dict[str, int] = {
     "EqualizeTimeSetPoint":    4162,
     "EqualizeIntervalDay":     4163,
     "DaysBetweenBulkAbsorb":   4252,
+    "VbattOffset":             4189,
 }
 
 # Keys that must always be included in monitored parameters (forced in config_flow)

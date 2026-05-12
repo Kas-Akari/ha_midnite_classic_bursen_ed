@@ -64,6 +64,7 @@
           "endingAmps": "Ending Amps",
           "WizBangJrRawCurrent": "WhizBang Jr Raw Current",
           "ReasonForResting": "Reason For Resting",
+          "VbattOffset": "Battery Voltage Offset",
           "AbsorbVoltageSetPoint": "Absorb Voltage Setpoint",
           "FloatVoltageSetPoint": "Float Voltage Setpoint",
           "EqualizeVoltageSetPoint": "Equalize Voltage Setpoint",
