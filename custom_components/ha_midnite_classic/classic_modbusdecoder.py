@@ -119,12 +119,6 @@ def doDecode(addr, decoder):
                 ("EqualizeVoltageSetPoint", decoder.decode_16bit_int() / 10.0),  # 4151
             ]
         )
-    elif addr == 4188:
-        decoded = OrderedDict(
-            [
-                ("VbattOffset", decoder.decode_16bit_int() / 10.0),  # 4189
-            ]
-        )
     elif addr == 4360:
         decoded = OrderedDict(
             [
