@@ -119,6 +119,12 @@ def doDecode(addr, decoder):
                 ("EqualizeVoltageSetPoint", decoder.decode_16bit_int() / 10.0),  # 4151
             ]
         )
+    elif addr == 4188:
+        decoded = OrderedDict(
+            [
+                ("VbattOffset", decoder.decode_16bit_int() / 10.0),  # 4189
+            ]
+        )
     elif addr == 4360:
         decoded = OrderedDict(
             [
@@ -228,6 +234,7 @@ def getRegisters(ip: str, port: int = 502) -> dict:
         raw[4243]  = _readRegisters(client, 4243,  32)
         raw[4251]  = _readRegisters(client, 4251,   1)
         raw[16386] = _readRegisters(client, 16386,  4)
+        raw[4188]  = _readRegisters(client, 4188,   1)
 
     except Exception as ex:
         log.error(f"Modbus error {ip}:{port} — {ex}")
