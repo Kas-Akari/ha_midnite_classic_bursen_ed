@@ -133,9 +133,10 @@ async def write_register(
     # --- Encode HA value → raw Modbus integer --------------------------------
     raw_value: int = round(ha_value * scale)
 
-    #Encode negative integers as Modbus registers use 16-bit format
+    #Encode negative integers as Modbus registers use 16-bit format by converting it to unsigned representation
+
     if raw_value < 0:
-        raw_value = raw_value & 0xFFFF  # Convert to unsigned representation
+        raw_value = raw_value & 0xFFFF
 
     _LOGGER.debug(
         "Writing %s: HA value=%.4f → raw=%d  (register %d, address %d, scale ×%d)",
